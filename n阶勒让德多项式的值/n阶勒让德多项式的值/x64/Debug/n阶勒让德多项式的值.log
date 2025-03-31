@@ -1,0 +1,4 @@
+﻿  n阶勒让德多项式的值.cpp
+C:\Users\17340\OneDrive\C++\n阶勒让德多项式的值\n阶勒让德多项式的值\n阶勒让德多项式的值.cpp(30,60): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+C:\Users\17340\OneDrive\C++\n阶勒让德多项式的值\n阶勒让德多项式的值\n阶勒让德多项式的值.cpp(33,9): warning C4244: “return”: 从“float”转换到“int”，可能丢失数据
+  n阶勒让德多项式的值.vcxproj -> C:\Users\17340\OneDrive\C++\n阶勒让德多项式的值\x64\Debug\n阶勒让德多项式的值.exe
