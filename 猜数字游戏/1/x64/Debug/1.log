@@ -1,3 +1,0 @@
-﻿  1.cpp
-C:\Users\17340\OneDrive\C++\猜数字游戏\1\1\1.cpp(11,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  1.vcxproj -> C:\Users\17340\OneDrive\C++\猜数字游戏\1\x64\Debug\1.exe
