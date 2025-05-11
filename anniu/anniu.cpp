@@ -1,20 +1,23 @@
 #include"common.h"
 #include"button.h"
+#include"clock.hpp"
 int main() {
 	initgraph(600, 600);
 	setbkcolor(RGB(200, 230, 250));
-	cleardevice();//Ó¦ÓÃ±³¾°É«£¬ÇåÆÁºó¸²¸ÇÕû¸ö´°¿Ú
-	Button button(60, 60, B_WIDTH, B_HEIGHT, RGB(173, 216, 230),RGB(135, 206, 235), "3");
-	button.Show();
-	ExMessage msg;
-	BeginBatchDraw();  //Ë«»º³å£¬·ÀÖ¹ÉÁÆÁ
+	cleardevice();//åº”ç”¨èƒŒæ™¯è‰²ï¼Œæ¸…å±åè¦†ç›–æ•´ä¸ªçª—å£
+	Button button(60, 60, B_WIDTH, B_HEIGHT, RGB(140, 240, 230),RGB(135, 206, 235), "0");
+	button.Show(); 
+	ExMessage msg; 
+	BeginBatchDraw();  //åŒç¼“å†²ï¼Œé˜²æ­¢é—ªå±
 	while (1) {
 		peekmessage(&msg, EM_MOUSE);
 		button.Show();
-		if (button.MouseInButton(msg)) {};
+		if (button.ClickButton(msg)&&Timer::tTimer(100,0)) {
+			button.SetText();
+		}
 		FlushBatchDraw();
 	}
-	EndBatchDraw();  //½áÊøË«»º³å
-	closegraph();//¹Ø±ÕÍ¼ĞÎ´°¿Ú²¢ÊÍ·ÅÏà¹Ø×ÊÔ´
+	EndBatchDraw();  //ç»“æŸåŒç¼“å†²
+	closegraph();//å…³é—­å›¾å½¢çª—å£å¹¶é‡Šæ”¾ç›¸å…³èµ„æº
 	return 0;
 }
