@@ -9,8 +9,8 @@ protected:
 public:
 	Button(int x = 0, int y = 0, int b_width = B_WIDTH, int b_height = B_HEIGHT, COLORREF inColor = RGB(0, 250, 250), COLORREF outColor=RGB(135,206,235), string text = "0");
 	void Show();
-	bool MouseInButton(ExMessage msg);//Êó±êÊÇ·ñÔÚ°´Å¥Àï
-	bool ClickButton(ExMessage msg);//ÅĞ¶Ïµ±Ç°ÊÇ·ñµã»÷ÁË°´Å¥
-	void Settext();
+	bool MouseInButton(ExMessage msg);//é¼ æ ‡æ˜¯å¦åœ¨æŒ‰é’®é‡Œ
+	bool ClickButton(ExMessage& msg);//åˆ¤æ–­å½“å‰æ˜¯å¦ç‚¹å‡»äº†æŒ‰é’®
+	void SetText();
 	~Button() { ; }
 };
