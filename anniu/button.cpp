@@ -1,5 +1,5 @@
 #include "button.h"
-Button::Button(int x, int y, int b_width, int b_height, COLORREF inColor, COLORREF outColor,string text)
+Button::Button(int x, int y, int b_width, int b_height, COLORREF inColor, COLORREF outColor, string text)
 {
 	this->x = x;
 	this->y = y;
@@ -24,17 +24,17 @@ void Button::Show()
 bool Button::MouseInButton(ExMessage msg)
 {
 	setfillcolor(inColor);
-	if (msg.x > x && msg.x<x + b_width && msg.y>y && msg.y <y+ b_height) {
+	if (msg.x > x && msg.x<x + b_width && msg.y>y && msg.y < y + b_height) {
 		this->inColor = RGB(140, 240, 230);   //鼠标在按钮中改变颜色
 		return true;
 	}
- 	this->inColor=this->outColor;  //鼠标不在按钮中还原颜色
+	this->inColor = this->outColor;  //鼠标不在按钮中还原颜色
 	return false;
 }
 bool Button::ClickButton(ExMessage& msg)
 {
-	if (MouseInButton(msg) && msg.message==WM_LBUTTONUP) {
-		peekmessage(&msg, EM_MOUSE);
+	if (MouseInButton(msg) && msg.message == WM_LBUTTONUP) {
+		msg.message = WM_RBUTTONDOWN;
 		return true;
 	}
 	return false;
